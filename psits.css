@@ -1,0 +1,125 @@
+body { 
+    background-color: rgb(2, 4, 37);
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 1fr 250px;
+    grid-template-areas: 
+    "header"
+    "officerGrid"
+    "announcement";
+}
+
+.header {
+    margin-left: 20px;
+    margin-top: 20px;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 85px 1fr;
+    grid-template-rows: 47px 1fr;
+    grid-template-areas: 
+    "left right"
+    "left sub";
+}
+
+.right {
+    grid-area: right;
+    display: flex;
+    justify-content: flex-start;
+    color: rgb(238, 245, 235);   
+}
+
+#text {
+    font-size: clamp(1px, 7vw, 30px);
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.left {
+    grid-area: left;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.sub {
+    font-size: clamp(16px, 7vw, 17px);
+    grid-area: sub;
+    display: flex;
+    color: rgb(249, 251, 252);
+    opacity: 0.7;
+}
+
+.announcement {
+    grid-area: announcement;
+    background-color: rgb(19, 19, 60);
+    border-radius: 15px;
+}
+
+.officerGrid {
+    grid-area: officerGrid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.officercard {
+   text-align: center;
+   padding-top: 10px;
+   background-color: rgb(21, 26, 67);
+   border-radius: 20px;
+   overflow: hidden;
+   border: 4px solid rgb(27, 29, 107);
+}
+
+.officercard:hover {
+    border: 3.5px solid blue;
+    cursor: pointer;
+}
+
+.officercard img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid rgb(186, 185, 209);
+}
+
+.officercard h2 {
+    color: rgb(227, 227, 243);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.officercard h3 {
+    color: rgb(226, 225, 232);
+    margin-top: -10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.officercard p {
+    color: rgb(229, 218, 218);
+    opacity: 0.7;
+}
+
+.announcement h2 {
+    color: white;
+    margin-left: 20px;
+}
+
+.announcement p {
+    color: rgb(218, 220, 226);
+    margin-left: 19px;
+}
+
+.logo {
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid rgb(18, 16, 16);
+}
+
+.krys {
+    background-color: white;
+}
